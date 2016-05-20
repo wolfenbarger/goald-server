@@ -11,4 +11,5 @@ module.exports = function(app, passport) {
 	require('./authentication')(app, passport);
 	app.use(requireAuthentication)
 	require('./user')(app);
+	require('./contract_request')(app);
 }
