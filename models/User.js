@@ -6,13 +6,21 @@ module.exports = function(sequelize, DataTypes) {
 		facebook_refresh_token: DataTypes.STRING,
 		email: DataTypes.STRING,
 		name: DataTypes.STRING
-	}/*, {
+	}, {
 		classMethods: {
 			associate: function(models) {
-				User.hasMany(models.QuizDescriptor);
+				User.hasMany(models.Contract);
+				/*
+				User.belongsToMany(User, {
+				    as: "Friends",
+				    through: "Friend",
+				    foreignKey: 'user',
+				    otherKey: 'friend'
+				});
+				*/
 			}
 		}
-	}*/);
+	});
 
 	return User;
 };

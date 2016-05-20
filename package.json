@@ -4,15 +4,16 @@
   "description": "Server for goald app.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "mocha --recursive"
   },
   "dependencies": {
     "body-parser": "^1.15.1",
     "express": "^4.13.4",
     "express-session": "^1.13.0",
+    "fb": "^1.0.2",
     "passport": "^0.3.2",
     "passport-facebook-token": "^3.2.0",
-    "passport-local": "^1.0.0",
     "pg": "^4.5.5",
     "sequelize": "^3.23.2"
   },
@@ -27,5 +28,8 @@
     "heroku"
   ],
   "license": "MIT",
-  "devDependencies": {}
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
 }

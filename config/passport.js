@@ -24,7 +24,6 @@ module.exports = function(passport) {
         clientID: process.env.FACEBOOK_APP_ID,
         clientSecret: process.env.FACEBOOK_APP_SECRET
       }, function(accessToken, refreshToken, profile, done) {
-
         models.User.findOne({
           where: { facebook_id: profile.id }
         }).then(function(user) {
